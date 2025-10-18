@@ -1,0 +1,11 @@
+file_format: "1"
+id: yellowjacket
+name: Yellowjacket
+type: shield
+url: https://github.com/sporaktu/yellowjacket-config
+requires: [nice_nano_v2]
+features:
+  - keys
+siblings:
+  - yellowjacket_left
+  - yellowjacket_right
