@@ -29,7 +29,6 @@
 #define HOMEROW_RIGHT 9
 #define FUNCTION 10
 #define ADJUST 11
-
 #define B0     BT_SEL 0
 #define B1     BT_SEL 1
 #define B2     BT_SEL 2
@@ -187,123 +186,120 @@
         base_layer {
             label = "BASE";
             bindings = <
-//               ╭─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────╮
-                   &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O
-     &kp A        &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K         &kp L         &kp SEMI
-     &kp Z        &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH
-// ╰─────────────┴─────────────┴─────────────╮                                                           ╭─────────────┴─────────────┴─────────────╯
-                                                 &mo 8         &kp SPACE         &kp SPACE     &mo 9
-//                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
+&kp W  &kp E      &kp R      &kp T  &kp Y  &kp U  &kp I  &kp O
+&kp A  &kp S      &kp D      &kp F  &kp G  &kp H  &kp J  &kp K      &kp L    &kp SEMI
+&kp Z  &kp X      &kp C      &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
+&mo 8  &kp SPACE  &kp SPACE  &mo 9
             >;
         };
 
         nav {
             label = "NAV";
             bindings = <
-                 &to 2          &kp LEFT      &kp UP        &kp RIGHT         &kp TAB       &kp LEFT      &kp UP        &kp RIGHT
-   &kp BACKSPACE &kp HOME      &kp DOWN      &kp END       &kp PG_DN         &kp PG_UP     &kp HOME      &kp DOWN      &kp END       &trans
-   &trans        &trans        &kp LSHFT     &kp LALT      &kp TAB           &kp PG_DN     &trans        &trans        &trans        &trans
-                                             &trans        &trans            &trans        &trans
+&kp LEFT_ARROW  &kp LEFT  &kp UP     &kp PG_UP  &kp TAB    &kp LEFT   &kp UP    &kp RIGHT
+&kp BACKSPACE   &kp HOME  &kp DOWN   &kp END    &kp PG_DN  &kp PG_UP  &kp HOME  &kp DOWN   &kp END  &trans
+&trans          &trans    &kp LSHFT  &kp LALT   &kp TAB    &kp PG_DN  &trans    &trans     &trans   &trans
+&trans          &trans    &trans     &trans
             >;
         };
 
         mouse {
             label = "MOUSE";
             bindings = <
-                 &to 1           &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT      &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT
-   &kp BACKSPACE &mkp MB2        &mmv MOVE_DOWN  &mkp MB1        &msc SCRL_DOWN       &msc SCRL_UP    &mkp MB1        &mmv MOVE_DOWN  &mkp MB2         &trans
-   &msc SCRL_LEFT &mkp MB5       &mkp MB3        &mkp MB4        &msc SCRL_RIGHT      &msc SCRL_DOWN  &mkp MB4        &mkp MB3        &mkp MB5         &trans
-                                                 &trans          &trans               &trans          &trans
+&mmv MOVE_LEFT  &mmv MOVE_LEFT  &mmv MOVE_UP    &msc SCRL_UP  &msc SCRL_LEFT   &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_RIGHT
+&kp BACKSPACE   &mkp MB2        &mmv MOVE_DOWN  &mkp MB1      &msc SCRL_DOWN   &msc SCRL_UP    &mkp MB1      &mmv MOVE_DOWN   &mkp MB2  &trans
+&msc SCRL_LEFT  &mkp MB5        &mkp MB3        &mkp MB4      &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB4      &mkp MB3         &mkp MB5  &trans
+&trans          &trans          &trans          &trans
             >;
         };
 
         gaming {
             label = "GAMING";
             bindings = <
-         &mo 4    &kp A  &kp W      &kp D          &kp EQUAL    &kp N7  &kp N8  &kp N9
-         &mo 5    &kp Q  &kp S      &kp R      &kp F        &kp MINUS    &kp N4  &kp N5  &kp N6  &kp BACKSPACE
-&kp TAB  &kp Z  &kp X      &kp C      &kp V        &kp DOT      &kp N1  &kp N2  &kp N3  &kp N0
-                         &kp LCTRL  &kp LSHFT    &lt 9 SPACE  &trans
+&kp A           &kp W      &kp D        &kp E   &kp EQUAL  &kp N7     &kp N8  &kp N9
+&mo 4           &kp Q      &kp S        &kp R   &kp F      &kp MINUS  &kp N4  &kp N5  &kp N6  &kp BACKSPACE
+&mo 5           &kp Z      &kp X        &kp C   &kp V      &kp DOT    &kp N1  &kp N2  &kp N3  &kp N0
+&kp LEFT_SHIFT  &kp SPACE  &lt 9 SPACE  &trans
             >;
         };
 
         gaming_2 {
             label = "GAMING_2";
             bindings = <
-         &mo 3         &kp A  &kp W      &kp D          &kp EQUAL    &kp N7  &kp N8  &kp N9
-         &kp LEFT_ALT  &kp Q  &kp S      &kp R      &kp G        &kp MINUS    &kp N4  &kp N5  &kp N6  &kp BACKSPACE
-&kp TAB  &kp Z         &kp X  &kp C      &kp B        &kp DOT      &kp N1  &kp N2  &kp N3  &kp N0
-                              &kp LCTRL  &kp LSHFT    &lt 9 SPACE  &trans
+&kp A           &kp W      &kp D        &kp T   &kp EQUAL  &kp N7     &kp N8  &kp N9
+&kp LEFT_ALT    &kp Q      &kp S        &kp R   &kp G      &kp MINUS  &kp N4  &kp N5  &kp N6  &kp BACKSPACE
+&kp TAB         &kp Z      &kp X        &kp C   &kp B      &kp DOT    &kp N1  &kp N2  &kp N3  &kp N0
+&kp LEFT_SHIFT  &kp SPACE  &lt 9 SPACE  &trans
             >;
         };
 
         gaming_3 {
             label = "GAMING_3";
             bindings = <
-         &kp LEFT_ALT  &kp A  &kp W      &kp D              &kp EQUAL    &kp N7  &kp N8  &kp N9
-         &mo 3         &kp Q  &kp S      &kp R      &kp NUMBER_2    &kp MINUS    &kp N4  &kp N5  &kp N6  &kp BACKSPACE
-&kp TAB  &kp Z         &kp X  &kp C      &kp NUMBER_3    &kp DOT      &kp N1  &kp N2  &kp N3  &kp N0
-                              &kp LCTRL  &kp LSHFT       &lt 9 SPACE  &trans
+&kp A         &kp W      &kp D        &kp NUMBER_1  &kp EQUAL     &kp N7     &kp N8  &kp N9
+&kp LEFT_ALT  &kp Q      &kp S        &kp R         &kp NUMBER_2  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp BACKSPACE
+&kp TAB       &kp Z      &kp X        &kp C         &kp NUMBER_3  &kp DOT    &kp N1  &kp N2  &kp N3  &kp N0
+&kp LCTRL     &kp LSHFT  &lt 9 SPACE  &trans
             >;
         };
 
         number {
             label = "NUMBER";
             bindings = <
-        &alt_tab  &trans  &trans  &kp LS(LBRC)              &kp EQUAL  &kp N7  &kp N8  &kp N9
-        &trans    &trans  &trans  &kp LBKT              &kp RBKT                 &kp MINUS  &kp N4  &kp N5  &kp N6  &kp BSPC
-&trans  &trans    &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp DOT    &kp N1  &kp N2  &kp N3  &kp N0
-                          &trans  &trans                   &trans     &trans
+&alt_tab  &trans  &kp LS(LEFT_BRACE)  &kp LS(RIGHT_BRACE)   &kp EQUAL              &kp N7      &kp N8        &kp N9
+&trans    &trans  &trans              &kp LBKT              &kp RBKT               &kp MINUS   &kp N4        &kp N5  &kp N6  &kp BSPC
+&trans    &trans  &trans              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERIOD  &kp NUMBER_1  &kp N2  &kp N3  &kp N0
+&trans    &trans  &trans              &trans
             >;
         };
 
         symbol_shift {
             label = "SYMBOL";
             bindings = <
-        &trans  &trans  &trans  &trans      &kp LS(EQUAL)   &kp LS(N7)        &kp LS(N8)        &kp LS(N9)
-        &trans  &trans  &trans  &trans  &trans    &kp LS(MINUS)   &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &kp BACKSPACE
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LS(PERIOD)  &kp LS(N1)        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(N0)
-                        &trans  &trans    &trans          &trans
+&trans      &trans  &trans  &trans  &kp LS(EQUAL)  &kp LS(N7)      &kp LS(N8)        &kp LS(N9)
+&trans      &trans  &trans  &trans  &trans         &kp LS(MINUS)   &kp LS(NUMBER_4)  &kp LS(N5)        &kp LS(NUMBER_6)  &kp BACKSPACE
+&trans      &trans  &trans  &trans  &trans         &kp LS(PERIOD)  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(N0)
+&kp LS(N0)  &trans  &trans  &trans
             >;
         };
 
         homerow_left {
             label = "HMLEFT";
             bindings = <
-        &key_repeat  &kp TAB   &kp ESC    &kp DEL        &trans  &trans  &trans  &trans
-        &sk LGUI     &sk LALT  &sk LCTRL  &sk LSHFT  &kp ENTER        &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &trans    &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans
-                               &trans     &trans           &trans  &trans
+&kp TAB   &kp ESCAPE  &kp DELETE  &kp BACKSPACE  &trans       &trans  &trans  &trans
+&sk LGUI  &sk LALT    &sk LCTRL   &sk LSHFT      &kp ENTER    &trans  &trans  &trans  &trans  &trans
+&trans    &trans      &trans      &trans         &key_repeat  &trans  &trans  &trans  &trans  &trans
+&trans    &trans      &trans      &trans
             >;
         };
 
         homerow_right {
             label = "HMRIGHT";
             bindings = <
-        &trans  &trans  &trans  &trans      &kp BACKSPACE  &kp DEL    &kp ESC    &kp TAB
-        &trans  &trans  &trans  &trans  &trans    &kp ENTER      &sk LSHFT  &sk LCTRL  &sk LALT  &kp LGUI
-&trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans     &trans     &trans    &trans
-                        &trans  &trans    &trans         &trans
+&trans  &trans  &trans  &trans  &kp BACKSPACE  &kp DEL      &kp ESC    &kp TAB
+&trans  &trans  &trans  &trans  &trans         &kp ENTER    &sk LSHFT  &sk LCTRL  &sk LALT  &kp LGUI
+&trans  &trans  &trans  &trans  &trans         &key_repeat  &trans     &trans     &trans    &trans
+&trans  &trans  &trans  &trans
             >;
         };
 
         function {
             label = "FUNCTION";
             bindings = <
-        &kp F9  &kp F10  &kp F11  &kp F12      &trans  &trans  &trans  &trans
-        &kp F5  &kp F6   &kp F7   &kp F8   &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans    &trans  &trans  &trans  &trans  &trans
-                         &trans   &trans    &trans  &trans
+&kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &trans  &trans
+&trans  &kp F5   &kp F6   &kp F7   &kp F8  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1   &kp F2   &kp F3   &kp F4  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &trans   &trans
             >;
         };
 
         adjust_layer {
             label = "SYSTEM";
             bindings = <
-        &sys_reset   &bt BT_CLR  &out OUT_TOG  &trans      &trans  &kp F7  &kp F8  &kp F9
-        &bootloader  &bt BT_NXT  &trans        &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans       &bt BT_PRV  &trans        &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10
-                                 &trans        &trans    &trans  &trans
+&trans       &bt BT_NXT  &bt BT_CLR  &out OUT_TOG    &trans  &trans  &trans  &trans
+&bootloader  &trans      &bt BT_PRV  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&sys_reset   &sys_reset  &trans      &bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans      &trans      &trans
             >;
         };
     };
