@@ -69,12 +69,6 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <1 0>;
-            bindings = <&kp ESC>;
-        };
-
         reset_layers {
             bindings = <&to 0>;
             key-positions = <30 29>;
@@ -98,7 +92,7 @@
 
         activate-gaming {
             bindings = <&to 3>;
-            key-positions = <1 2 0 29>;
+            key-positions = <8 9 10>;
             layers = <0>;
         };
 
@@ -106,17 +100,27 @@
             bindings = <&kp Q>;
             key-positions = <0 1>;
             layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         p {
             bindings = <&kp P>;
             key-positions = <6 7>;
             layers = <0>;
+            require-prior-idle-ms = <125>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
+            layers = <0>;
+            require-prior-idle-ms = <125>;
         };
 
         grave {
             bindings = <&kp GRAVE>;
-            key-positions = <9 10>;
+            key-positions = <14 15>;
+            layers = <0>;
         };
     };
 
