@@ -69,14 +69,10 @@
             require-prior-idle-ms = <100>;
         };
 
-        to_gaming {
-            bindings = <&to 3>;
-            key-positions = <20 21>;
-        };
-
         quote {
             bindings = <&kp SQT>;
-            key-positions = <8 9>;
+            key-positions = <15 16>;
+            layers = <0>;
         };
 
         dash {
@@ -151,7 +147,19 @@
 
         activate-gaming {
             bindings = <&to 3>;
-            key-positions = <1 2 3 30>;
+            key-positions = <1 2 0 29>;
+            layers = <0>;
+        };
+
+        q {
+            bindings = <&kp Q>;
+            key-positions = <0 1>;
+            layers = <0>;
+        };
+
+        p {
+            bindings = <&kp P>;
+            key-positions = <6 7>;
             layers = <0>;
         };
     };
