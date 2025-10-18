@@ -51,7 +51,19 @@
 
 / {
     behaviors {
-        // Empty behaviors section - removed home row mods
+        td_left_thumb: tap_dance_left_thumb {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo 8>, <&mo 1>;
+        };
+
+        td_right_thumb: tap_dance_right_thumb {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo 9>, <&mo 6>;
+        };
     };
 
     combos {
@@ -138,10 +150,10 @@
         base_layer {
             label = "BASE";
             bindings = <
-&kp W  &kp E      &kp R      &kp T  &kp Y  &kp U  &kp I  &kp O
-&kp A  &kp S      &kp D      &kp F  &kp G  &kp H  &kp J  &kp K      &kp L    &kp SEMI
-&kp Z  &kp X      &kp C      &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
-&mo 8  &kp SPACE  &kp SPACE  &mo 9
+&kp W           &kp E      &kp R      &kp T  &kp Y  &kp U  &kp I  &kp O
+&kp A           &kp S      &kp D      &kp F  &kp G  &kp H  &kp J  &kp K      &kp L    &kp SEMI
+&kp Z           &kp X      &kp C      &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
+&td_left_thumb  &kp SPACE  &kp SPACE  &td_right_thumb
             >;
         };
 
